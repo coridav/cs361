@@ -41,14 +41,15 @@ def main_menu(stats):
     clear()
     border()
     print("MAIN DASHBOARD")
-    print(f"Tallies: {stats.tallies} | Stars: {stats.stars}")
-    print("Goal: "+str(stats.goal_tallies)+" more tallies for a star!")
-    print("Complete 5 stars for a $3 treat!")
+    print(f"Tallies: {stats.tallies}/{stats.goal_tallies} | Stars: {stats.stars}/{stats.goal_stars}")
+    print(f"Goal: {stats.tallies_left} more tallies for a star!")
+    print(f"Complete {stats.stars_left} stars for a $3 treat!")
     border()
     print("0. Exit")
     print("1. View Tasks")
     print("2. Add New Task")
     print("3. View History")
+    print("4. View Rewards")
     print("")
     print("Enter Selection: ", end="")
 
@@ -113,22 +114,24 @@ def rewards_menu(stats):
     border()
     print("REWARDS")
     print(f"Fun money: ${stats.fun_money}")
-    border()    
+    print("")
     # check if the file exists first for Reliability
     if os.path.exists("rewards.json"):
         with open("rewards.json") as f:
             rewards = json.load(f)
         for reward in rewards:
-            # Change 'name' to 'item' here!
+            i=1
             item_name = reward.get('item', 'Unknown Item')
             cost = reward.get('cost', 0)
-            print(f"{item_name}: ${cost}")
+            print(f"{i}.{item_name}: ${cost:.2f}")
+            i+=1
             
-    print("")
+    border() 
     print("0. Exit to Main Menu")
-    print("1. Edit tallies and stars goal")
-    print("2. Input Custom cost of reward")
-
+    print("#. Enter reward number to purchase/use")
+    print("A. Edit Tallies/Stars Goals")
+    print("B. Quick Purchase (Custom Amount)")
+    print("C. Go to Task List")
     print("Enter Selection: ", end="")
 
 def edit_treat_goal_menu(stats):

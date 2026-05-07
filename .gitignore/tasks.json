@@ -1,0 +1,36 @@
+{
+    "tasks": [
+        {
+            "name": "verify snaps docs",
+            "due_date": "05/07/2026",
+            "description": "one oregon",
+            "status": "incomplete"
+        },
+        {
+            "name": "mod 6 quiz",
+            "due_date": "05/08/2026",
+            "description": "",
+            "status": "incomplete"
+        },
+        {
+            "name": "Quiz 6",
+            "due_date": "05/10/2026",
+            "description": "Intro to Sec",
+            "status": "incomplete"
+        },
+        {
+            "name": "discussion post",
+            "due_date": "05/10/2026",
+            "description": "",
+            "status": "incomplete"
+        }
+    ],
+    "completed": [],
+    "stats": {
+        "tallies": 0,
+        "stars": 0,
+        "fun_money": 0.0,
+        "goal_tallies": "2",
+        "goal_stars": "2"
+    }
+}

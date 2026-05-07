@@ -3,3 +3,4 @@ main.py: The "Hub" that controls the main loop and navigation
 data_manager.py: The logic for saving/loading tasks and history to a file (JSON)
 menus.py: Contains the print statements for different screens
 tasks.json: where data lives (so progress is saved when exiting)
+completed.json: where data of completed tasks lives
